@@ -1,0 +1,227 @@
+@import 'typography';
+@import 'icons';
+
+
+$sm-break: 48em;
+// colors
+$dark-gray: #727272;
+$med-gray: #b4b3b5;
+$light-gray: #eaeaea;
+$body-font: #020202;
+$link-blue: #0076b6; // why do we have both of these blues?
+$byui-blue: #056cb6;
+$font-size: 20px;
+$font-size-2: 30px;
+// Utility classes
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+img {
+    max-width: 100%;
+    padding: 10px;
+    box-shadow: 10px 5px 5px gray;
+    margin: 10px;
+}
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+header {
+    background-color: $byui-blue;
+    margin: 0 10px 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+h1 {
+    background-color: $light-gray;
+    padding: 20px;
+    font-family: 'BYUI Open Sans';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Open Sans Light'), local('OpenSans-Light'), url('https://fonts.gstatic.com/s/opensans/v13/DXI1ORHCpsQm3Vp6mXoaTQzyDMXhdD8sAj6OAJTFsBI.woff2') format('woff2');
+    src: local('Open Sans Light'), local('OpenSans-Light'), url('https://fonts.gstatic.com/s/opensans/v13/DXI1ORHCpsQm3Vp6mXoaTRsxEYwM7FgeyaSgU71cLG0.woff') format('woff');
+    src: local('Open Sans Light'), local('OpenSans-Light'), url('https://fonts.gstatic.com/s/opensans/v13/DXI1ORHCpsQm3Vp6mXoaTcDdSZkkecOE1hvV7ZHvhyU.ttf') format('truetype');
+    color: $dark-gray;
+}
+.icon-byui-logo {
+    background-color: #020202;
+    padding: 30px;
+    color: white;
+    font-size: 40px;
+    text-decoration: none;
+}
+div.site-banner__right {
+    padding-left: 30px;
+    position: absolute;
+    top: 20px;
+    right: 40px;
+}
+span.icon-search.text-white.mobile-header-icon::before {
+    color: white;
+    font-size: 30px;
+}
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+span.icon-audience.text-white.mobile-header-icon::before {
+    color: white;
+    font-size: $font-size-2;
+}
+span.icon-menu.text-white.mobile-header-icon::before {
+    color: white;
+    font-size: $font-size-2;
+}
+nav li {
+    list-style-type: none;
+    display: inline;
+    margin-left: 80px;
+    padding: 10px;
+    overflow: hidden;
+}
+nav li a {
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    font-family: 'BYUI Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Open Sans'), local('OpenSans'), url('https://fonts.gstatic.com/s/opensans/v13/TCmDhmS1RRL7aqhqZW19hwLUuEpTyoUstqEm5AMlJo4.woff2') format('woff2');
+    src: local('Open Sans'), local('OpenSans'), url('https://fonts.gstatic.com/s/opensans/v13/uYKcPVoh6c5R0NpdEY5A-Q.woff') format('woff');
+    src: local('Open Sans'), local('OpenSans'), url('https://fonts.gstatic.com/s/opensans/v13/yYRnAC2KygoXnEC8IdU0gQLUuEpTyoUstqEm5AMlJo4.ttf') format('truetype');
+}
+a {
+    text-decoration: none;
+}
+
+
+nav ul li.active a {
+    color: $link-blue;
+}
+
+/*always place .active before "hover" so it can work properly*/
+nav a:hover {
+    background-color: white;
+    color: black;
+    transition: all 0.3s ease;
+}
+
+nav ul.hide {
+    display: none;
+}
+body {
+    background-color: white;
+    margin: 10px;
+}
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+}
+div.university-info-banner {
+    background-color: $body-font;
+    color: white;
+    padding: 15px;
+    margin: auto;
+    text-align: center;
+    font-family: 'BYUI Open Sans';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Open Sans Light'), local('OpenSans-Light'), url('https://fonts.gstatic.com/s/opensans/v13/DXI1ORHCpsQm3Vp6mXoaTQzyDMXhdD8sAj6OAJTFsBI.woff2') format('woff2');
+    src: local('Open Sans Light'), local('OpenSans-Light'), url('https://fonts.gstatic.com/s/opensans/v13/DXI1ORHCpsQm3Vp6mXoaTRsxEYwM7FgeyaSgU71cLG0.woff') format('woff');
+    src: local('Open Sans Light'), local('OpenSans-Light'), url('https://fonts.gstatic.com/s/opensans/v13/DXI1ORHCpsQm3Vp6mXoaTcDdSZkkecOE1hvV7ZHvhyU.ttf') format('truetype');
+}
+button.button-primary {
+    background-color: $byui-blue;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    border-color: $byui-blue;
+    font-size: $font-size;
+}
+.button-two {
+    margin: auto;
+    padding: 20px;
+    font-size: 20px;
+    font-family: 'BYUI Open Sans';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Open Sans Light'), local('OpenSans-Light'), url('https://fonts.gstatic.com/s/opensans/v13/DXI1ORHCpsQm3Vp6mXoaTQzyDMXhdD8sAj6OAJTFsBI.woff2') format('woff2');
+    src: local('Open Sans Light'), local('OpenSans-Light'), url('https://fonts.gstatic.com/s/opensans/v13/DXI1ORHCpsQm3Vp6mXoaTRsxEYwM7FgeyaSgU71cLG0.woff') format('woff');
+    src: local('Open Sans Light'), local('OpenSans-Light'), url('https://fonts.gstatic.com/s/opensans/v13/DXI1ORHCpsQm3Vp6mXoaTcDdSZkkecOE1hvV7ZHvhyU.ttf') format('truetype');
+    box-shadow: 10px 5px 5px gray;
+}
+aside.info a {
+    display: block;
+    background-color: $med-gray;
+    padding: 10px;
+    text-align: center;
+    font-size: $font-size;
+}
+h3 {
+    font-family: 'BYUI Open Sans';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Open Sans Light'), local('OpenSans-Light'), url('https://fonts.gstatic.com/s/opensans/v13/DXI1ORHCpsQm3Vp6mXoaTQzyDMXhdD8sAj6OAJTFsBI.woff2') format('woff2');
+    src: local('Open Sans Light'), local('OpenSans-Light'), url('https://fonts.gstatic.com/s/opensans/v13/DXI1ORHCpsQm3Vp6mXoaTRsxEYwM7FgeyaSgU71cLG0.woff') format('woff');
+    src: local('Open Sans Light'), local('OpenSans-Light'), url('https://fonts.gstatic.com/s/opensans/v13/DXI1ORHCpsQm3Vp6mXoaTcDdSZkkecOE1hvV7ZHvhyU.ttf') format('truetype');
+    font-size: $font-size-2;
+}
+.dates {
+
+    background-color: $byui-blue;
+    padding: 15px;
+    color: white;
+    font-family: 'BYUI Open Sans';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Open Sans Light'), local('OpenSans-Light'), url('https://fonts.gstatic.com/s/opensans/v13/DXI1ORHCpsQm3Vp6mXoaTQzyDMXhdD8sAj6OAJTFsBI.woff2') format('woff2');
+    src: local('Open Sans Light'), local('OpenSans-Light'), url('https://fonts.gstatic.com/s/opensans/v13/DXI1ORHCpsQm3Vp6mXoaTRsxEYwM7FgeyaSgU71cLG0.woff') format('woff');
+    src: local('Open Sans Light'), local('OpenSans-Light'), url('https://fonts.gstatic.com/s/opensans/v13/DXI1ORHCpsQm3Vp6mXoaTcDdSZkkecOE1hvV7ZHvhyU.ttf') format('truetype');
+
+}
+.important-dates {
+
+    font-family: 'BYUI Open Sans';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Open Sans Light'), local('OpenSans-Light'), url('https://fonts.gstatic.com/s/opensans/v13/DXI1ORHCpsQm3Vp6mXoaTQzyDMXhdD8sAj6OAJTFsBI.woff2') format('woff2');
+    src: local('Open Sans Light'), local('OpenSans-Light'), url('https://fonts.gstatic.com/s/opensans/v13/DXI1ORHCpsQm3Vp6mXoaTRsxEYwM7FgeyaSgU71cLG0.woff') format('woff');
+    src: local('Open Sans Light'), local('OpenSans-Light'), url('https://fonts.gstatic.com/s/opensans/v13/DXI1ORHCpsQm3Vp6mXoaTcDdSZkkecOE1hvV7ZHvhyU.ttf') format('truetype');
+}
+
+.pictures {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+figcaption {
+    text-align: center;
+}
+@media only screen and(min-width: 992px) {
+    main {
+        display: grid;
+        grid-column-gap: 35px;
+        grid-template-columns: 2fr 1fr;
+        grid-auto-rows: 1fr;
+    }
+    img.img {
+        grid-template-columns: 1 / 2;
+        grid-template-rows: 2 / 3;
+    }
+    .pictures {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
